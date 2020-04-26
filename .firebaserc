@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "melkfaks": {
+      "hosting": {
+        "car-radar": [
+          "melkfaks"
+        ]
+      }
+    }
+  }
+}
