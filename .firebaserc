@@ -2,7 +2,7 @@
   "targets": {
     "melkfaks": {
       "hosting": {
-        "car-radar": [
+        "Angular9": [
           "melkfaks"
         ]
       }

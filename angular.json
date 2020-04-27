@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "car-radar": {
+    "Angular9": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "sass"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/car-radar/browser",
+            "outputPath": "dist/Angular9/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -29,7 +25,7 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -69,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "car-radar:build"
+            "browserTarget": "Angular9:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "car-radar:build:production"
+              "browserTarget": "Angular9:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "car-radar:build"
+            "browserTarget": "Angular9:build"
           }
         },
         "test": {
@@ -96,7 +92,7 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -118,18 +114,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "car-radar:serve"
+            "devServerTarget": "Angular9:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "car-radar:serve:production"
+              "devServerTarget": "Angular9:serve:production"
             }
           }
         },
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/car-radar/server",
+            "outputPath": "dist/Angular9/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "externalDependencies": [
@@ -153,21 +149,21 @@
         "serve-ssr": {
           "builder": "@nguniversal/builders:ssr-dev-server",
           "options": {
-            "browserTarget": "car-radar:build",
-            "serverTarget": "car-radar:server"
+            "browserTarget": "Angular9:build",
+            "serverTarget": "Angular9:server"
           },
           "configurations": {
             "production": {
-              "browserTarget": "car-radar:build:production",
-              "serverTarget": "car-radar:server:production"
+              "browserTarget": "Angular9:build:production",
+              "serverTarget": "Angular9:server:production"
             }
           }
         },
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
-            "browserTarget": "car-radar:build:production",
-            "serverTarget": "car-radar:server:production",
+            "browserTarget": "Angular9:build:production",
+            "serverTarget": "Angular9:server:production",
             "routes": [
               "/"
             ]
@@ -185,5 +181,5 @@
       }
     }
   },
-  "defaultProject": "car-radar"
+  "defaultProject": "Angular9"
 }
